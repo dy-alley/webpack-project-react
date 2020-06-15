@@ -46,16 +46,16 @@ module.exports = webpackMerge(baseConfig, {
             outputPath: 'js',
             hash: true,
         }),
-        // new CompressionWebpackPlugin({
-        //     // 新资源名
-        //     filename: '[path].gz[query]',
-        //     algorithm: 'gzip',
-        //     // 处理所有匹配此 {RegExp} 的资源
-        //     test: /\.js/,
-        //     threshold: 10240, // 大于这个大小的文件才会被压缩
-        //     // 只有压缩率比这个值小的资源才会被处理
-        //     minRatio: 0.8
-        // }),
+        new CompressionWebpackPlugin({
+            // 新资源名
+            filename: '[path].gz[query]',
+            algorithm: 'gzip',
+            // 处理所有匹配此 {RegExp} 的资源
+            test: /\.js/,
+            threshold: 10240, // 大于这个大小的文件才会被压缩
+            // 只有压缩率比这个值小的资源才会被处理
+            minRatio: 0.8
+        }),
     ],
     // optimization: {
     //     splitChunks: {
