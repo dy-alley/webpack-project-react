@@ -5,6 +5,8 @@ const Webpack = require("webpack")
 const AddAssetHtmlWebpackPLugin = require("add-asset-html-webpack-plugin");
 const path = require("path")
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 module.exports = webpackMerge(baseConfig, {
     mode: "production",
@@ -46,6 +48,7 @@ module.exports = webpackMerge(baseConfig, {
             outputPath: 'js',
             hash: true,
         }),
+        new CleanWebpackPlugin(),
         new CompressionWebpackPlugin({
             // 新资源名
             filename: '[path].gz[query]',
