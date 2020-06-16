@@ -5,15 +5,15 @@ const routes:RouteInterface[] = [
   {
     path: '/',
     exact: true,
-    component: loadable(() => import('@/pages/home/index')), 
-    name: 'home', 
+    component: loadable(() => import('@/pages/home/index')),
+    name: 'home',
     title: '首页',
-    requiredAuth: true,
-    key:'/',
+    requiredAuth: false,
+    key: '/'
   },
   {
     path: '/login',
-    component:loadable(() => import('@/pages/login')),
+    component: loadable(() => import('@/pages/login')),
     name: 'login',
     title: '登录'
   },
@@ -23,6 +23,6 @@ const routes:RouteInterface[] = [
     component: loadable(() => import('@/pages/notFound/index')),
     name: '404',
     title: '404'
-  },
-]
+  }
+];
 export default routes;

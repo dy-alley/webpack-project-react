@@ -1,13 +1,15 @@
-import React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
-import CountDown from '@/components/countDown'
+import React, { useState } from 'react';
+import { RouteComponentProps } from 'react-router-dom';
+import Popup from '@/components/Popup/Popup'
 
 const Home: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) => {
+  const [show, isShow] = useState(false)
   return (
     <div className="App">
-      <CountDown endTime="2020-06-15 19:16:00"/> 
+      <Popup visible={show} position="bottom"/>
+      <button onClick={() => isShow(true)}>点击</button>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

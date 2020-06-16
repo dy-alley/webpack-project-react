@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
-import Routes from './routes'
-import renderRoutes from './renderRoutes'
-import { HashRouter as Router  } from 'react-router-dom'
+import React from 'react';
+import Routes from './routes';
+import renderRoutes from './renderRoutes';
+import { HashRouter as Router } from 'react-router-dom';
 
 const authed = false;
 class RouterContainer extends React.Component {
@@ -10,7 +10,7 @@ class RouterContainer extends React.Component {
             <Router>
                 {renderRoutes(Routes, authed)}
             </Router>
-        ) 
+        );
     }
 }
 export default RouterContainer;

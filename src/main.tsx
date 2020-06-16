@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDom from 'react-dom'
-import App from './App'
-import RouterContainer from '@/router'
+import ReactDom from 'react-dom';
+import App from './App';
+import RouterContainer from '@/router';
 ReactDom.render(
-    <RouterContainer/>, 
-    document.getElementById('root'))
+    <RouterContainer/>,
+    document.getElementById('root'));

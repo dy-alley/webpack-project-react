@@ -1,0 +1,29 @@
+.mask{
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   background: #000;
+   opacity: 0;
+}
+
+
+.fade-enter-done{
+    opacity: .7;
+    transition: opacity 100ms ease-in;
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    -ms-transition: opacity 100ms ease-in;
+    -o-transition: opacity 100ms ease-in;
+}
+
+
+.fade-exit-done {
+    opacity: 0;
+    transition: opacity 100ms;
+    -webkit-transition: opacity 100ms;
+    -moz-transition: opacity 100ms;
+    -ms-transition: opacity 100ms;
+    -o-transition: opacity 100ms;
+}
