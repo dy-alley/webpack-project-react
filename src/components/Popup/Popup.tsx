@@ -8,7 +8,7 @@ const Popup:React.FC<Iprops> = (props:Iprops) => {
     return (
             <div>
                 <CSSTransition
-                    in={show}
+                    in={visible}
                     timeout={timeout || 0.3}
                     classNames="fade"
                     unmountOnExit
