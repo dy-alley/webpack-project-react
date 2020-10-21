@@ -48,9 +48,8 @@ class BScrollWrapper extends Component<IProps, IState> {
             pullUpLoad:this.props.pullUpLoad,
             pullDownRefresh:this.props.pullDown
         })
-        console.log(this.scroll)
         // 第一次加载
-        if (  this.props.pullingUp && this.props.pullingDown ) {
+        if (this.props.pullingUp && this.props.pullingDown ) {
             this.props.pullingUp(this.page);
         } else if (this.props.pullingUp) {
             this.props.pullingUp(this.page);
